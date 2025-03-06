@@ -1,5 +1,7 @@
 #include "BeachBallManager.h"
 
+#include <iostream>
+
 BeachBallManager::BeachBallManager()
 {
 	spawnPoint = sf::Vector2f(350, 250);
@@ -19,17 +21,40 @@ BeachBallManager::~BeachBallManager() { }
 
 void BeachBallManager::spawn()
 {
+	static int counter;
+	static bool spawnCheck;
+	counter = 0;
+	spawnCheck = false;
+
+	for (int i = 0; i < balls.size(); i++)
+	{
+		if (balls[i].isAlive()){ counter++; }
+	}
+
+
 	for (int i = 0; i < balls.size(); i++) 
 	{
-		if (!balls[i].isAlive()) 
+		if (!balls[i].isAlive() && !spawnCheck)
 		{
+			spawnCheck = true;
 			balls[i].setAlive(true);
 			balls[i].setVelocity(rand() % 200 - 100, rand() % 200 - 100);
 			balls[i].setPosition(spawnPoint);
+			std::cout << "Current balls active " << counter << "\n";	
 			return;
 		}
 
+		else if (i == balls.size() - 1 && balls[i].isAlive())
+		{ 
+			balls.push_back(Ball());	
+			std::cout << "new ball spawned, new total: " << balls.size() << "\n";
+			return;
+		}
 	}
+
+
+	
+
 }
 
 void BeachBallManager::update(float dt)
