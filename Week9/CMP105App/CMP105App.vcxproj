@@ -167,6 +167,7 @@
     <ClCompile Include="Framework\VectorHelper.cpp" />
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="playerManager.cpp" />
     <ClCompile Include="SpriteManager.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -183,6 +184,7 @@
     <ClInclude Include="Framework\GameObject.h" />
     <ClInclude Include="Framework\VectorHelper.h" />
     <ClInclude Include="Level.h" />
+    <ClInclude Include="playerManager.h" />
     <ClInclude Include="SpriteManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

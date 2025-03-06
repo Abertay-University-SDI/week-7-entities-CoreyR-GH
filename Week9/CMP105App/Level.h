@@ -5,6 +5,7 @@
 #include "Framework/Input.h"
 #include "BeachBallManager.h"
 #include "SpriteManager.h"
+#include "playerManager.h"
 #include <string>
 #include <iostream>
 
@@ -22,4 +23,5 @@ private:
 	// Default variables for level class.
 	BeachBallManager ballManager;
 	SpriteManager spriteManager;
+	playerManager player;
 };

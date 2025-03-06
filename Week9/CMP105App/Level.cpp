@@ -26,6 +26,8 @@ void Level::handleInput(float dt)
 	{
 		spriteManager.spawn();
 	}
+
+	player.handleInput(input);
 }
 
 // Update game objects
@@ -33,6 +35,7 @@ void Level::update(float dt)
 {
 	ballManager.update(dt);
 	spriteManager.update(dt);
+	player.update(dt);
 }
 
 // Render level
@@ -42,6 +45,7 @@ void Level::render()
 
 	ballManager.render(window);
 	spriteManager.render(window);
+	player.render(window);
 
 	endDraw();
 }
