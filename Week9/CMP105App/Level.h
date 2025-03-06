@@ -3,6 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include "Framework/BaseLevel.h"
 #include "Framework/Input.h"
+#include "BeachBallManager.h"
 #include <string>
 #include <iostream>
 
@@ -18,5 +19,5 @@ public:
 
 private:
 	// Default variables for level class.
-	
+	BeachBallManager ballManager;
 };
