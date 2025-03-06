@@ -5,7 +5,7 @@
 BeachBallManager::BeachBallManager()
 {
 	spawnPoint = sf::Vector2f(350, 250);
-	texture.loadFromFile("gfx/Beach_Ball.png");
+	texture.loadFromFile("gfx/Goomba.png");
 
 	for (int i = 0; i < 20; i++) 
 	{
@@ -46,8 +46,15 @@ void BeachBallManager::spawn()
 
 		else if (i == balls.size() - 1 && balls[i].isAlive())
 		{ 
-			balls.push_back(Ball());	
-			std::cout << "new ball spawned, new total: " << balls.size() << "\n";
+			Ball newBall;
+			
+			newBall.setAlive(true);
+			newBall.setVelocity(rand() % 200 - 100, rand() % 200 - 100);
+			newBall.setPosition(spawnPoint);
+
+			balls.push_back(newBall);
+			counter++;
+			std::cout << "new ball spawned, new active total: " << counter << "\n";
 			return;
 		}
 	}
