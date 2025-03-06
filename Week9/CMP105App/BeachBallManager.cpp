@@ -5,7 +5,7 @@
 BeachBallManager::BeachBallManager()
 {
 	spawnPoint = sf::Vector2f(350, 250);
-	texture.loadFromFile("gfx/Goomba.png");
+	texture.loadFromFile("gfx/Beach_Ball.png");
 
 	for (int i = 0; i < 20; i++) 
 	{
@@ -13,7 +13,6 @@ BeachBallManager::BeachBallManager()
 		balls[i].setAlive(false);
 		balls[i].setTexture(&texture);
 		balls[i].setSize(sf::Vector2f(100, 100));
-
 	}
 }
 
@@ -58,10 +57,6 @@ void BeachBallManager::spawn()
 			return;
 		}
 	}
-
-
-	
-
 }
 
 void BeachBallManager::update(float dt)

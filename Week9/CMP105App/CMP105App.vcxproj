@@ -167,6 +167,7 @@
     <ClCompile Include="Framework\VectorHelper.cpp" />
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="SpriteManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="DO_NOT_EDIT.txt" />
@@ -182,6 +183,7 @@
     <ClInclude Include="Framework\GameObject.h" />
     <ClInclude Include="Framework\VectorHelper.h" />
     <ClInclude Include="Level.h" />
+    <ClInclude Include="SpriteManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

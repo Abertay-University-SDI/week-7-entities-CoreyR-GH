@@ -5,7 +5,14 @@
 
 class SpriteManager
 {
-	std::vector<sf::Sprite> spriteList;
+private:
+	sf::Sprite spriteList[40];
+	bool aliveList[40];
+	sf::Texture texture;
+	int counter;
+	float speed;
+	sf::Text text;
+	sf::Font font;
 
 public:
 	SpriteManager();
@@ -16,4 +23,3 @@ public:
 	void deathCheck();
 	void render(sf::RenderWindow* window);
 };
-
